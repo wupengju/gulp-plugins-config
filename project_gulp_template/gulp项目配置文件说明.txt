@@ -1,0 +1,90 @@
+
+
+http://www.w3cplus.com/blogs/blueed
+
+1.目录介绍
+project_gulp_template
+	├─dist 								// 发布目录
+	├─gulp 								// gulp的任务模块 项目不需要用到的可以直接在引入项目之前删掉配置
+	├─node_modules 				// gulp的依赖插件模块
+	├─gulpfile.js 				// gulp的配置文件
+	├─package.json 				// gulp的项目介绍和依赖模块版本
+	└─src 								// 源代码目录
+
+2.插件介绍
+/**
+ * 组件安装
+ * npm install 
+ * gulp-minify-html     html压缩
+ * gulp-sass            编译sass【自带输出格式 进行压缩】
+ * gulp-less            编译less
+ * gulp-autoprefixer    添加CSS浏览器前缀
+ * gulp-minify-css      CSS压缩
+ * gulp-imagemin        图片压缩
+ * gulp-base64          图片转换成Base64编码
+ * gulp.spritesmith     雪碧图
+ * jshint               JS检查
+ * gulp-jshint          JS检查
+ * gulp-uglify          JS压缩
+ * gulp-rename          重命名
+ * gulp-flatten         移动指定文件
+ * gulp-concat          合并文件
+ * gulp-clean           清理编译环境
+ * gulp-changed         只编译改动过的文件【编译前后文件名后缀如果发生改变的话则需要单独配置】
+ * gulp-plumber         阻止gulp插件发生错误导致进程退出并输出错误日志
+ * gulp-notify          任务流执行提醒
+ * babel                编译ES6
+ * babel-preset-es2015  编译ES6
+ * gulp-connect         node本地服务器
+ * gulp-webserver       本地服务器
+ * mockjs               生成随机数据&拦截Ajax请求
+ * gulp-sourcemaps      映射压缩或编译后的文件到源代码文件 便于调试
+ * gulp-livereload      浏览器即时刷新(借助Chrome的livereload插件)
+ * gulp-useref					根据注释将HTML中需要合并压缩的区块找出来，对区块内的所有文件进行合并    
+ * gulp-rev             更改版本号-静态文件名改成hash的形式
+ * gulp-rev-collector   gulp-rev的插件，用于html模板更改引用路径
+ * gulp-load-plugins    gulp-load-plugins
+ *
+ * 额外：
+ * gulp-sequence        顺序执行任务【直接用gulp任务列表就行了】
+ * gulp-cached          缓存当前任务中的文件，只让已修改的文件通过管道    
+ * gulp-debug           调试gulp任务执行
+ * gulp-file-include    俺搞内部项目的时候会用到，让 HTML 组件化的第一小步
+ * gulp-git             直接在 Build 时把代码都提交到 git上了,特么劳资懒起来连我自己都害怕
+ * --save-dev
+ */
+
+3.gulp运行指令
+gulp
+gulp taskName
+gulp watch
+
+4.配置gulp的环境变量
+在path用户变量中添加 全局安装的gulp路径: C:\Users\acerr\AppData\Roaming\npm
+
+5.支持gulp-sourcemaps的常用插件
+gulp-concat
+gulp-rename
+gulp-babel
+gulp-uglify
+gulp-autoprefixer
+gulp-less
+gulp-sass
+
+6.解决缓存问题的插件组合
+  1.给合并压缩后的文件添加hash
+  2.将文件替换回HTML中去
+gulp-useref 【找出HTML注释中需要合并的区块 对区块内的所有文件进行合并】
+gulp-rev 【在文件名后追加hash】
+gulp-rev-replace 【配合gulp-rev使用，拿到生成的manifest.json后替换对应的文件名称】
+gulp-rev-collector 【把最终的带有hash的文件名替换回HTML中去】
+
+<!-- build:css ../css/index.css -->
+<link rel="stylesheet" href="../css/index/demo1.css">
+<link rel="stylesheet" href="../css/index/demo2.css">
+<!-- endbuild -->
+
+<!-- build:js ../js/index.js -->
+<script src="../js/index/demo.js"></script>
+<script src="../js/index/demo1.js"></script>
+<!-- endbuild -->

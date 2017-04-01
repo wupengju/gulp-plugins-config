@@ -1,0 +1,1 @@
+{"version":3,"sources":["demo-es6.js"],"names":["a"],"mappings":";;AAEA;;AAEC,KAAMA,IAAI,GAAV;AACA","file":"../demo-es6.js","sourcesContent":["\r\n\r\n{\r\n\r\n\tconst a = 100;\r\n}"]}

@@ -1,0 +1,19 @@
+{
+    "bitwise": true,           //禁用位运算符
+    "curly": true,             //循环或者条件语句必须使用花括号包围
+    "eqeqeq": true,            //强制使用三等号
+    "freeze": true,            //禁止重写原生对象的原型，比如 Array ， Date
+    "immed": true,             //禁止定义之前使用变量，忽略 function 函数声明
+    "newcap": true,            //构造器函数首字母大写
+    "noarg": true,             //禁止使用 arguments.caller 和 arguments.callee ，未来会被弃用
+    "undef": true,             //变量未定义
+    "boss": true,              //所有定义的变量都要使用
+    "eqnull": false,            // true: Requires all functions run in ES5 Strict Mode
+    "es3": true,               //兼容低级浏览器 IE 6/7/8/9
+    "strict": true,            //严格模式
+    "maxparams": 6,            //最多参数个数
+    "maxdepth": 4,             //最大嵌套深度
+    "evil": true,              //控制 eval 使用警告
+    "laxcomma": true,          //检查不安全的折行，忽略逗号在最前面的编程风格
+    "notypeof": true           //检查无效的 typeof 操作符值
+}

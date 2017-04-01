@@ -1,0 +1,1 @@
+{"version":3,"file":"../../sass/sass.css","sources":["sass.scss"],"sourcesContent":["h1 {\r\n\tcolor: red;\r\n\tdisplay: flex;\r\n}"],"names":[],"mappings":"AAAA,AAAA,EAAE,AAAC,CACF,KAAK,CAAE,GAAG,CACV,OAAO,CAAE,IAAI,CACb"}

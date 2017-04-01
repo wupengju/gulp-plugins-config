@@ -1,0 +1,40 @@
+.icon-edit {
+	background: url("../../sprite.png") no-repeat scroll 0px -50px;
+	width: 22px;
+	height: 22px;
+}
+.icon-edit1 {
+	background: url("../../sprite.png") no-repeat scroll -32px -50px;
+	width: 22px;
+	height: 22px;
+}
+.icon-fangXing {
+	background: url("../../sprite.png") no-repeat scroll -24px -82px;
+	width: 10px;
+	height: 10px;
+}
+.icon-hotEditer {
+	background: url("../../sprite.png") no-repeat scroll -90px -50px;
+	width: 12px;
+	height: 12px;
+}
+.icon-infoListTitle {
+	background: url("../../sprite.png") no-repeat scroll 0px -82px;
+	width: 14px;
+	height: 14px;
+}
+.icon-next {
+	background: url("../../sprite.png") no-repeat scroll 0px 0px;
+	width: 46px;
+	height: 40px;
+}
+.icon-pingLun {
+	background: url("../../sprite.png") no-repeat scroll -64px -50px;
+	width: 16px;
+	height: 16px;
+}
+.icon-pre {
+	background: url("../../sprite.png") no-repeat scroll -56px 0px;
+	width: 46px;
+	height: 40px;
+}
