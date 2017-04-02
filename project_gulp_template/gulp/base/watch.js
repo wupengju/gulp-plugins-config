@@ -11,12 +11,13 @@ module.exports = function (gulp, Plugin, config) {
 
         Plugin.livereload.listen();
 
-        for (var key in config) {
-
-            if (config.hasOwnProperty(key)) {
-
-                gulp.watch(config[ key ].src, [ key ]);
-            }
-        }
+        gulp.watch('./src/app/*.html', ['html']);
+        gulp.watch('./src/sass/**/*.scss', ['sass']);
+        gulp.watch('./src/less/**/*.less', ['less']);
+        gulp.watch('./src/css/**/*.css', ['css']);
+        gulp.watch('./dist/js/index/**/*.js', ['hashScript']);
+        gulp.watch('./src/js/es6/*.js', ['es6']);
+        gulp.watch('./src/js/**/*.js', ['script']);
+        
     });
 };

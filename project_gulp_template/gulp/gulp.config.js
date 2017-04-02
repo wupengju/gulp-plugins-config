@@ -7,7 +7,7 @@ module.exports = function () {
   var config = {
   			userefHTML: {
   				src: './src/app/*.html',
-  				dist: './src/app/'
+  				dist: './dist/app/'
   			},
   			rev: {
   				src: ['./rev/**/*.json', './src/app/*.html'],
@@ -15,8 +15,8 @@ module.exports = function () {
   				options: {
   					replaceReved: true,
             dirReplacements: {
-                // 'css': '/dist/css',
-                // '/js/': '/dist/js/',
+                // 'css': '/css/',
+                '/index': '/hashIndex'
                 // 'cdn/': function(manifest_value) {
                 //     return '//cdn' + (Math.floor(Math.random() * 9) + 1) + '.' + 'exsample.dot' + '/img/' + manifest_value;
                 // }
@@ -28,15 +28,15 @@ module.exports = function () {
 	  			dist: './dist/app/'
 	  		},
 	  		sass: {
-	  			src: './src/sass/*.scss',
+	  			src: './src/sass/**/*.scss',
 	  			dist: './src/css/'
 	  		},
 	  		less: {
-	  			src: './src/less/*.less',
+	  			src: './src/less/**/*.less',
 	  			dist: './src/css/'
 	  		},
 	  		css: {
-	  			src: './src/css/*.css',
+	  			src: './src/css/**/*.css',
 	  			dist: './dist/css/',
 	  			autoprefixer: {
 	  			  browsers: [
@@ -49,7 +49,7 @@ module.exports = function () {
 	  		},
 	  		image: {
 	  			src: './src/images/**',
-	  			dist: './dist/images',
+	  			dist: './dist/images/',
 	  			optimizationLevel: 5, //类型：Number  默认：3  取值范围：0-7（优化等级）
           progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
           interlaced: true, //类型：Boolean 默认：false 隔行扫描gif进行渲染
@@ -80,7 +80,7 @@ module.exports = function () {
 	  			}
 	  		},
 	  		base64: {
-	  			src: './dist/css/*.css',
+	  			src: './dist/css/**/*.css',
 	  			dist: './dist/css/',
   			  options: {
   			    extensions: ['png'],
@@ -89,16 +89,16 @@ module.exports = function () {
   			  }
 	  		},
 	  		hashScript: {
-	  			src: './src/js/*.js',
-	  			dist: './dist/js/'
+	  			src: './dist/js/index/**/*.js',
+	  			dist: './dist/js/hashIndex/'
 	  		},
 	  		script: {
-	  			src: './dist/js/*.js',
+	  			src: ['./src/js/**/*.js', '!./src/js/es6/*.js'],
 	  			dist: './dist/js/'
 	  		},
 	  		es6: {
 	  			src: './src/js/es6/*.js',
-	  			dist: './src/js/',
+	  			dist: './src/js/index/',
 	  			options: {
 	  				presets: ['es2015']
 	  			}

@@ -9,7 +9,7 @@ module.exports = function (gulp, Plugin, config) {
 
 	var rev = require('gulp-rev');
 
-    gulp.task('hashScript', ['es6', 'userefHTML'], function (callback) {
+    gulp.task('hashScript', ['script'], function (callback) {
 
         gulp.src(config.src)
             .pipe(Plugin.plumber())

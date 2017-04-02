@@ -15,9 +15,6 @@ module.exports = function (gulp, Plugin, config) {
             .pipe(Plugin.plumber())
             .pipe(spritesmith(config.options))
             .pipe(gulp.dest(config.dist))
-            .pipe(Plugin.notify({
-            	message: "CSS Sprite task begin."
-            }))
             .pipe(Plugin.livereload());
     });
 };

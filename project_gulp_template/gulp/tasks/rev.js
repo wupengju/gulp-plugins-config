@@ -9,8 +9,8 @@ module.exports = function (gulp, Plugin, config) {
 
 	var revCollector = require('gulp-rev-collector');
 
-    gulp.task('rev', ['css', 'script'], function(callback) {
-
+    gulp.task('rev', ['css', 'hashScript'], function(callback) {
+        
         gulp.src(config.src)
             .pipe(Plugin.plumber())
             .pipe(revCollector(config.options))

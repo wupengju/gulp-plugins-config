@@ -10,7 +10,7 @@ module.exports = function (gulp, Plugin, config) {
 	var imagemin = require('gulp-imagemin'),
         pngquant = require('imagemin-pngquant');
 
-    gulp.task('image', function() {
+    gulp.task('image', ['imageSprite'], function() {
 
         gulp.src(config.src)
             .pipe(Plugin.plumber())
@@ -21,9 +21,6 @@ module.exports = function (gulp, Plugin, config) {
                 multipass: config.multipass
             }))
             .pipe(gulp.dest(config.dist))
-            .pipe(Plugin.notify({
-                message: "Compassed image task begin."
-            }))
             .pipe(Plugin.livereload());
     });
     /*var imagemin = require('gulp-imagemin'),

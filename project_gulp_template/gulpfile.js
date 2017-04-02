@@ -67,7 +67,7 @@ require('./gulp/http')(gulp, $, {
 // 获取模拟数据
 var data = require('./data');
 
-// 引入mockjs
+// 引入mockjs模块
 var Mock = require('mockjs');
 
 // 设置webserver本地服务器

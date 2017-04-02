@@ -9,14 +9,14 @@ module.exports = function (gulp, Plugin, config) {
 
 	var minifyHtml = require('gulp-minify-html');
 
-    gulp.task('html', ['rev'], function(callback) {
+    gulp.task('html', function(callback) {
 
         gulp.src(config.src)
             .pipe(Plugin.plumber())
             .pipe(minifyHtml())
             .pipe(gulp.dest(config.dist))
             .pipe(Plugin.notify({
-            	message: "Compassed HTML task begin."
+            	message: "Compress HTML task begin."
             }))
             .pipe(Plugin.livereload())
             .on('end', callback);

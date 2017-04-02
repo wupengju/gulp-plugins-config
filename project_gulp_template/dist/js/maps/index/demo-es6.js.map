@@ -1,0 +1,1 @@
+{"version":3,"sources":["index/demo-es6.js"],"names":["a"],"mappings":"AAAA,YAIC,IAAIA,GAAI","file":"../../index/demo-es6.js","sourcesContent":["\"use strict\";\n\n{\n\n\tvar a = 100;\n}\n//# sourceMappingURL=es6maps/demo-es6.js.map\n"]}
